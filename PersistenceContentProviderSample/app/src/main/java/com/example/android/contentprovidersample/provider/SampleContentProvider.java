@@ -132,7 +132,7 @@ public class SampleContentProvider extends ContentProvider {
             @Nullable String[] selectionArgs) {
         switch (MATCHER.match(uri)) {
             case CODE_CHEESE_DIR:
-                throw new IllegalArgumentException("Invalid URI, cannot update without ID" + uri);
+                throw new IllegalArgumentException("Invalid URI, cannot delete without ID" + uri);
             case CODE_CHEESE_ITEM:
                 final Context context = getContext();
                 if (context == null) {
